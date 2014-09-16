@@ -54,41 +54,95 @@
                 </section>
                 <section>
                     <section>
-		                		<h2>Integration</h2>
-		                		<p>Two or more objects each with their own systems of producing output</p>
+		                		<h1>Integration</h1>
+		                		<p>Primary challenge is merging two systems comprised of multiple subsystems</p>
+		                		<ul>
+				                		<li class="fragment">CMS (Drupal, Wordpress)</li>
+				                		<li class="fragment">Responsive Framework (Bootstrap, Foundation, Webblocks)</li>
+		                	  </ul>
+		                	  <p class="fragment">Each of application is frequently bundled with more frameworks and languages, providing even <em>more</em> items to be aware of in development</p>
 		                </section>
 		                <section>
+		                    <h2>obstacles to integration</h2>
 		                		<ul>
-				                		<li>
-				                				Semantics & Structures are different
+				                		<li class="fragment">
+				                				Semantics &amp; structures are different
 				                		</li>
-				                		<li>
+				                		<li class="fragment">
 				                				Open source development challenges
 				                		</li>
 		                		</ul>
 		                </section>
                 		<section>
-                			<h2>Semantics & Structures</h2>
+                			<h2>Semantics &amp; Structures</h2>
                 			<ul>
                 					<li>
-                							CMS’s come with existing structures (Drupal menus), not always responsive
+                							CMS’s come with existing structures (ex: navigation), not always responsive
                 					</li>
-                					<li>
-                							Responsive frameworks work via CSS classes and semantics and JavaScript
+                					<li class="fragment">
+                							Responsive frameworks work via structures, css, and JavaScript
                 					</li>
-                					<li>
+                					<li class="fragment">
 															Data manipulation is handled on the backend, responsive design is heavily front end oriented
 													</li>
-													<li>
-															Additional libraries require different versions / levels of support (jQuery, Browser degradation)
+													<li class="fragment">
+															Additional libraries require different versions / levels of support (jQuery, browser degradation)
+                					</li>
+            					</ul>
+                		</section>
+                		<section>
+                			<h2>Open source development challenges</h2>
+                			<ul>
+                					<li>
+                							Open source CMS communities develop modules which add functionality
+                					</li>
+                					<li class="fragment">
+                							Modules are yet another piece of software created by users, frequently without the same level of support as core, compounding existing issues
+                					</li>
+                					<li class="fragment">
+															Open source tools are slow to change, making adapting new features sometimes difficult
+													</li>
+													<li class="fragment">
+															Integration of responsive frameworks and elements to outdated or highly rigid structures is difficult
                 					</li>
             					</ul>
                 		</section>
                 </section>
-
+                <section>
+                		<section>
+              					<h1>Integration Solutions</h1>
+              					<h2>It's like herding cats!</h2>
+                		</section>
+                		<section>
+                		    <h2>Core Frameworks</h2>
+                		    <p>Open source CMS leverage multiple frameworks within the CMS itself</p>
+                		    <br/>
+                		    <ul>
+		                		    <li class="fragment">Generate content with proper semantics through CMS first
+		                		    <p><em>Provides flexibility while retaining the CMS features which is core essential</em></p>
+		                		    </li>
+		                		    <li class="fragment">Learn how to create your own templates to alter output</li>
+                		    </ul>
+                		</section>
+                		<section>
+                		    <h2>Toolkits &amp; Functions</h2>
+                		    <h3>Leverage system modules &amp; functions</h3>
+                		    <p>Find functions that allow you to replace values or add classes to existing structures</p>
+                		</section>
+                		<section>
+                		    <h2>Javascript &amp; HTML5</h2>
+                		    <p>Where standard system output might fail, you can generate your own structures by manipulating data provided by the CMS with Javascript</p>
+                		</section>
+                </section>
+                <section>
+		                <h1>Unsolved Mysteries</h1>
+		                <p class="fragment">Is administration &amp; wysiwyg content editing responsive?</p> 
+		                <p class="fragment">Accessibility cannot be pushed aside.  Some structures still have not found elegant responsive presentations that maintain accessibility (such as tables)</p>
+		                <p class="fragment">How do you manage content editors?</p>
+                </section>
                 <section>
                     <h1>Thank You</h1>
-                    <h2>Any Questions?</h2>
+                    <h2>Next up: Quyen Vaillant, UCLA ITS</h2>
                     <div style="font-size:0.8em; margin-top: 48px;">
                         <p>
                             <strong><a href="http://lnicks.github.io/p/rwd-cms" title="Presentation file on Github">http://lnicks.github.io/p/rwd-cms</a></strong>
