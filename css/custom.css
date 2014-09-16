@@ -1,0 +1,29 @@
+.reveal p {
+    margin-bottom: 16px;
+}
+
+.reveal a:not(.image) {
+    color: #93eefa;
+}
+
+.reveal a:not(.image):hover {
+    color: #b3f2f7;
+}
+
+pre.code { 
+    background: #3F3F3F; 
+    padding: 6px 8px; 
+    box-sizing: border-box; 
+    color: #DCDCDC;
+}
+
+h1, h2, strong {
+    color: #fff;
+}
+
+.reveal ul {
+	margin-bottom:26px;
+	margin-top:10px;
+	width:80%;
+	font-size:30px;
+}
