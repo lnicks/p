@@ -1,0 +1,504 @@
+<section>
+                    <h1 style="font-size:2.8em">Accessibility Testing for <br />Mobile and Web Apps</h1>
+                    <div style="font-size:0.8em; margin-top: 48px;">
+                        <p><strong><a href="http://lnicks.github.io/p/mmwcon-access" title=
+                        "Presentation file on Github">http://lnicks.github.io/p/mmwcon-access</a></strong></p>
+                
+                        <p style="font-size:0.7em;">Patrick Burke / <a href="mailto:burke@ucla.edu"
+                        target="_blank">burke@ucla.edu</a></p>
+                
+                        <p style="font-size:0.7em;">Lloyd Nicks / <a href=
+                        "mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> /
+                        <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> /
+                        <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks
+                        [Twitter]</a></p>
+
+                        <p style="font-size:0.7em;">Chris Patterson / <a href="mailto:chris@ucla.edu"
+                        target="_blank">chris@ucla.edu</a> /
+                        <a href="https://github.com/spiritcapsule" target="_blank">spiritcapsule [GitHub]</a> /
+                        <a href="http://twitter.com/spiritcapsule" target="_blank">@spiritcapsule
+                        [Twitter]</a></p>
+
+                        <p style="font-size:0.7em;">Sal Santa Ana / <a href="mailto:ssantaana@ucla.edu"
+                        target="_blank">sal@oit.ucla.edu</a> /
+                        <a href="https://github.com/ssantaana" target="_blank">spiritcapsule [GitHub]</a></p>
+                    </div>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>What does 'Accessible' mean?</h2> 
+                        <p>“the degree to which a product, device, service, or environment is
+available to as many people as possible”</p>
+                        <p>source:wikipedia</p>
+                    </section>
+
+                    <section>
+                        <h2>Why is accessibility important?</h2> 
+                        <ul>
+                            <li>Adaptive software development hasn’t been part of mainstream, so new tech
+often causes new problems, excluding groups of people almost at random.</li>
+                            <li>Design needs to be considered early in projects to ensure access for
+all.</li>
+                            <li>Include testing by people with disabilities during a project.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Legal Risks</h2>
+                       <p>Accessible alternatives must provide equivalent functionality.  So if a website is inaccessible, any alternative must be available 24/7, from any location, etc. </p>   
+                        <ul>  
+                            <li> For educational institutions, the Deptartment of Justice has recently held that Section 504 (from 1973) requires all programs and services (including digital) to be equally accessible to all.</li>
+                            <li>The end result for the student is what natters, not using specific techniques.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Guidelines and Policies</h2>
+                        <p>WCAG 2.0 (Level A, AA, AAA)</p>
+                        <ul>
+                            <li>Increasing levels of specificity (&amp; difficulty)</li>
+                            <li>Level AA compliance (which includes Level a) has gained acceptance as international standard</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Section 508</h2>
+                        <ul>
+                            <li>Regulations for Federal websites and contractors from 2001;</li>
+                            <li>Scheduled for "Refresh" in 2016</li>
+                            <li>Meeting WCAG2 Level AA considered as meeting the new 508 standard.</li>
+                        <ul>
+                    </section>
+                    <section>
+                        <h2>Electronic Accessibility Leadership Team</h2>
+                        <ul>
+                            <li>UC committee of campus representatives and other stakeholders</li>
+                            <li> Developing systemwide accessibility initiatives for software, training programs, procurement guidelines.</li>
+                        </ul>
+                    </section>
+                    
+                </section>
+                <section>
+                    <section>
+                        <h2>User Scenarios</h2>
+                        <ul>
+                            <li>Learning Disabilities / Cognitive Impairment</li>
+                            <li>Deaf / Hearing Impairment</li>
+                            <li>Dexterity / Physical Impairment</li>
+                            <li>Low Vision, color blindness</li>
+                            <li>Blind</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Learning Disabilities / Cognitive Impairment</h2>
+                        <ul>
+                            <li>Largest category, but least understood (tech solutions still evolving)</li>
+                            <li>Avoid strobing effects (can cause seizures)</li>
+                            <li>Allow customization for a low-distraction interface, where appropriate</li>
+                            <li>Many of these features will be useful to any user in an unpredictable environment (noise, glare, etc.)</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Deaf / Hearing Impairment</h2>
+                        <ul>
+                            <li>Can use visual interface</li>
+                            <li>Need visual cues for sound events in apps</li> 
+                            <li>Need captioning for multimedia content</li>
+                            <li>Plan apps to display captioned video</li>
+                            <li>Provide mechanism for uploading of captioned video and caption files</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Dexterity / Physical Impairment</h2>
+                        <ul>
+                            <li>May have difficulty with small buttons, interacting with moving elements, etc.</li> 
+                            <li>Provide large target areas for tap events</li> 
+                            <li>Offer interface customization options if applicable</li>
+                            <li>Visual focus indicators are critical to users who rely on keyboard accessibility</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Low Vision, color blindness</h2>
+                        <ul>
+                            <li>Likely to use magnification (Zoom in iOS, etc.)</li>        
+                            <li>Provide color contrast of 4.5:1 for standard text</li> 
+                            <li>Avoid problem color combinations</li>
+                            <li>Avoid text embedded in graphics, which will not let users resize</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Blind</h2>    
+                        <ul>
+                            <li>Will have the most difficulty with standard visual interface</li> 
+                            <li>Primary users of iOS VoiceOver utility</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>State of Mobile Accessibility</h2>
+                        <ul>
+                            <li>Goal of web apps is to be cross-platform/interoperable</li>
+                            <li>Accessibility Tools do most of the work but are specific to mobile operating system</li>        
+                            <li>Wide gap in standards, old standards are not up to date with advancing mobile technologies</li>
+                            <li>Best strategy for web developers: Use MWBP, with understanding of WCAG 2.0 and awareness of built-in accessibility features of major target platforms</li>
+                            <li>Tools like Phonegap/Cordova can save much pain involved in developing for multiple platforms</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Voice Over</h2>
+                        <ul>
+                            <li>Apple VoiceOver utility</li>        
+                            <li>Built-in text-to-speech</li>        
+                            <li>Rapid response to user actions</li>        
+                            <li>Two methods of navigation: Flick left/right or tap active screen areas</li>        
+                            <li>Altered set of gestures for more reliable interaction</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Android TalkBack</h2>
+                        <ul>
+                            <li>Built-in text-to-speech</li>        
+                            <li>Applies to devices that run Android, not just smartphones / tablets</li>        
+                            <li>More User Customizations available (gesture to command)</li>        
+                            <li>Heavy customizations, OS fragmentation, &amp; device variability decrease consistency</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Native Platform Tips</h2>
+                        <p>iOS</p>
+                        <ul>
+                            <li>Many disability-friendly features and utilities</li>
+                            <li>Easiest platform for developers to provide accessibility (UIKit Accessibility API)</li>
+                        </ul>
+                        <p>Android</p>
+                        <ul>
+                            <li>Many accessibility utilities, but requires more configuration by user</li>
+                            <li>More difficult dev environment: must enable Accessibility API</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Web &amp; Cross Platform Tips</h2>
+                        <p>PhoneGap/Cordova:</p> 
+                        <ul>
+                            <li>Has Accessibility API</li>
+                            <li>Best choice for multi-platform development</li>
+                        </ul>
+                        <p>Web</p>
+                        <ul>
+                            <li>Can leverage existing HTML/responsive design skill sets</li>
+                            <li>Requires work to meet Web Content Accessibility Guidelines (WCAG 2.0, Level AA)</li>
+                        </ul>
+                    </section>
+                </section>
+                    
+                <section>
+                    <section>
+                        <h2>Evaluating and Testing <br/>for Accessibility</h2>
+                    </section>
+
+                    <section>
+                        <h2>UC Accessibility Prioritization Guide</h2>
+                        <p>Online calculator for very general guidance on assigning accessibility priority
+                        <ul>
+                            <li>
+                                <a href="http://www.ucop.edu/electronic-accessibility/standards-and-best-practices/prioritization-tools/prioritization-guide.html">http://www.ucop.edu/electronic-accessibility/standards-and-best-practices/prioritization-tools/prioritization-guide.html</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Examples of High Priority activities</h2>
+                        <ul>
+                            <li>New project; in the planning stage; for use by the public</li>
+                            <li>New backend, transactional system; for use across the UC system</li>
+                        </ul>
+                        <p>High priority user groups include students, patients, retirees, and donors</p>
+                    </section>
+
+                    <section>
+                        <h2>Automated Testing</h2>
+                        <ul>
+                            <li>Good for most Level A guidelines</li>
+                            <li>Bots are faster than humans</li>
+                            <li>Maintenance - ongoing testing of sites</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Entropy</h2>
+                        <p>Even if you release a perfectly accessible site on day one of launch, the accessibility of that site will degrade as content is added and modified.</p>
+
+                    </section>
+
+                    <section>
+                        <h2>Spidering Tools</h2>
+                        <ul>
+                            <li>SSB Bart Group AMP</li>
+                            <li>SiteImprove</li>
+                            <li>Deque WorldSpace</li>
+                            <li>HiSoftware Compliance Sherriff</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Free Tools</h2>
+                        <ul>
+                            <li>WebAIM WAVE (browser plugin)<br/><a href="http://wave.webaim.org"/>http://wave.webaim.org</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Integrated Development</h2>
+                        <ul>
+                            <li>Tenon.io<br/><a href="http://tenon.io">http://tenon.io</a></li>
+                            <li>AccessLint<br/><a href="http://accesslint.com">http://accesslint.com</a></li>
+                            <li>Google Accessibility Developer<br/><a href="https://github.com/GoogleChrome/accessibility-developer-tools">https://github.com/GoogleChrome/accessibility-developer-tools</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Other Tools</h2>
+                        <ul>
+                            <li>ARIA<br/><a href="http://www.w3.org/TR/wai-aria-1.1/">http://www.w3.org/TR/wai-aria-1.1/</a></li>
+                        </ul>
+                        <ul>
+                            <li>Visual ARIA<br/><a href="http://whatsock.com/training/matrices/visual-aria.htm">http://whatsock.com/training/matrices/visual-aria.htm</a></li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                    <h2>WebAIM Wave Demo</h2>
+                    <p>WAVE Extenstion for Google Chrome</p>
+                    <ul>
+                        <li>http://wave.webaim.org/extension/</li>
+                    </ul>
+                    <p>WAVE Toolbar for Firefox</p>
+                    <ul>
+                        <li>The plug-in does exist, but it is not up-to-date according to WebAIM's site</li>
+                    </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Manual Accessibility Testing</h2>
+                        <p>Quick Tests</p> 
+                        <ul>
+                            <li>Automated tests still show many items that require human judgment of accessibility (AMP scores show either 100% or 0% success)</li>
+                            <li>Practical / Case based analysis</li>
+                            <li>Tests for elements that can only be evaluated by a human</li>
+                            <li>Non technical assessment tools</li>
+                        </ul>
+                    </section>
+        
+                    <section>
+                        <h2>Quick Test Scope</h2>   
+                        <ul>
+                            <li>We aim to create a fast process to make many of those human-judgment assessments</li>
+                            <li>We do not attempt to show how to fix accessibility errors in this talk</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Quick Tests Goals</h2>   
+                        <ul>
+                            <li>Further prioritize the 21 Level A WCAG checkpoints</li>
+                            <li>Do verifiable, repeatable tests for the 13 AA items (that mostly require human judgment)</li>
+                            <li>Find simple, quick tests that can be applied to large amounts of content</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>The Tests</h2>   
+                        <ul>
+                            <li>Consistent Navigation</li>
+                            <li>Color Contrast</li>
+                            <li>Double-Size Test</li>
+                            <li>Copy Test</li>
+                            <li>Logical Structure</li>
+                            <li>Focus Visible</li>
+                            <li>Captions</li>
+                            <li>Image Accessibility</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Consistent Navigation</h2>
+                        <p>3.2.3 Consistent Navigation: Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user (Level AA)</p>
+                        <p>3.2.4 Consistent Identification: Components that have the same functionality within a set of Web pages are identified consistently (Level AA)</p>
+                    </section>
+
+
+                    <section>
+                        <h2>Consistent Navigation</h2>
+                        <p>Maximum 5 min: Are there unusual changes to the navigation or other page components?</p> 
+                        <p>Things to Check:
+                        <ul>
+                            <li>Consistency between Front page and secondary page navigation</li>
+                            <li>Choose a common navigation element and use keyboard only to get there</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>Color Contrast</h2>   
+                        <p>1.4.3 Contrast (Minimum): The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 (Level AA)</p>
+                    </section>
+
+                    <section>
+                        <h2>Color Contrast</h2>  
+                        <p>Run tests on 4-5 potential problem areas, concentrating on extreme cases requiring immediate fix</p> 
+                        <ul>
+                            <li>WebAIM’s Jared Smith mentions "readability is a continuum", as you can always be more accessible</li>
+                            <li>Text at 4.4:1 isn’t suddenly totally illegible. So focus on the biggest problems</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Color Contrast</h2>   
+                        <p>Color Contrast Checking Tools</p>
+                        <ul>
+                            <li>Snook.ca:<br><a href="http://snook.ca/technical/colour_contrast/colour.html">http://snook.ca/technical/colour_contrast/colour.html</a></li>
+                            <li>Juicy Studio:<br><a href="http://juicystudio.com/services/luminositycontrastratio.php">http://juicystudio.com/services/luminositycontrastratio.php</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Double Size Test</h2>   
+                        <p>1.4.4 Resize text: Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. (Level AA)</p>
+                        <ul>
+                            <li>Use CTRL-+ (CMD-+) to test whether the site is readable at 2x magnification</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Copy Test</h2>   
+                        <p>1.4.5 Images of Text: If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following: (Level AA)</p>
+                        
+                        <ul>
+                            <li>Text that cannot be copied is likely to be inaccessible</li>
+                            <li>To test if images of text are being used, try copying any “suspicious” items</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Logical Structure </h2>  
+                        <p>2.4.6 Headings and Labels: Headings and labels describe topic or purpose. (Level AA)</p> 
+                        <ul>
+                            <li>Headings should not be used for visual effects, on large blocks of content</li>
+                            <li>Use judiciously (too much structure without content is a problem)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Logical Structure </h2>   
+                        <ul>
+                            <li>Are headings used for logical structure? </li>
+                            <li>Does structure make sense? </li>
+                            <li>Do not worry about skipping consecutive heading levels</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Visible Focus</h2>   
+                        <p>2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)</p>
+                        <ul>
+                            <li>Is there a clear focus indicator when tabbing with keyboard</li>
+                            <li>On the homepage & 5 subpages, test focus by tabbing through the page</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Captions</h2>
+                        <p>1.2.2 Captions (Prerecorded): Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such. (Level A)</p>
+                    </section>
+
+                    <section>
+                        <h2>Captions</h2>
+                        <ul>
+                            <li>Quantify & assess portion of content that is multimedia</li>
+                            <li>Ensure controls are easy to identify and to enable captioning</li>
+                            <li>If significant in quantity or importance, play 30 sec of 3-5 clips
+                                <ul>
+                                    <li>Are captions present?</li>
+                                    <li>Are they readable?</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Images</h2>   
+                        <ul>
+                            <li>Survey Content: Appropriate Use of ALT text on Images</li>
+                            <li>Ensure controls are easy to identify and to enable captioning:
+                                <ul>
+                                    <li>Fail if several of those images have alt text = the filename</li>
+                                    <li>Fail if lots of text is embedded in images</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>References</h2>            
+                        <ul>
+                            <li>UCLA Disabilities and Computing Program:<br>
+                            <a href="http://dcp.ucla.edu">http://dcp.ucla.edu</a></li>
+                            <li>W3c Easy Checks:<br>
+                            <a href="http://www.w3.org/WAI/EO/Drafts/eval/checks">http://www.w3.org/WAI/EO/Drafts/eval/checks</a></li>
+                            <li>BBC Mobile Accessibility Guidelines 0.8<br>
+                            <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile_access.shtml">http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile_access.shtml</a></li>
+                            <li>WebAIM:<br>
+                            <a href="http://webaim.org/">http://webaim.org/</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Resources</h2>   
+                        <ul>
+                            <li>Wave:<a href="http://wave.webaim.org/"><br>http://wave.webaim.org/</a></li>
+                            <li>Validators:<br><a href="http://www.w3.org/QA/Tools/#validators">http://www.w3.org/QA/Tools/#validators</a></li>
+                            <li>Snook.ca Color Contrast:<br><a href="http://snook.ca/technical/colour_contrast/colour.html">http://snook.ca/technical/colour_contrast/colour.html</a></li>
+                            <li>Juicy Studio Color Contrast:<br><a href="http://juicystudio.com/services/luminositycontrastratio.php">http://juicystudio.com/services/luminositycontrastratio.php</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Thank You</h1>
+                        <div style="font-size:0.8em; margin-top: 48px;">
+                            <p><strong><a href="http://lnicks.github.io/p/mmwcon-access" title=
+                            "Presentation file on Github">http://lnicks.github.io/p/mmwcon-access</a></strong></p>
+                    
+                            <p style="font-size:0.7em;">Patrick Burke / <a href="mailto:burke@ucla.edu"
+                            target="_blank">burke@ucla.edu</a></p>
+                    
+                            <p style="font-size:0.7em;">Lloyd Nicks / <a href=
+                            "mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> /
+                            <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> /
+                            <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks
+                            [Twitter]</a></p>
+
+                            <p style="font-size:0.7em;">Chris Patterson / <a href="mailto:chris@ucla.edu"
+                            target="_blank">chris@ucla.edu</a> /
+                            <a href="https://github.com/spiritcapsule" target="_blank">spiritcapsule [GitHub]</a> /
+                            <a href="http://twitter.com/spiritcapsule" target="_blank">@spiritcapsule
+                            [Twitter]</a></p>
+
+                            <p style="font-size:0.7em;">Sal Santa Ana / <a href="mailto:ssantaana@ucla.edu"
+                            target="_blank">sal@oit.ucla.edu</a> /
+                            <a href="https://github.com/ssantaana" target="_blank">spiritcapsule [GitHub]</a></p>
+                        </div>
+                    </section>
+                </scetion>
