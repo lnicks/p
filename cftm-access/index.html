@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>reveal.js – The HTML Presentation Framework</title>
+        <title>UCLA Code For the Mission: Web &amp; Mobile Accessibility</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="../css/reveal.css">
-        <link rel="stylesheet" href="../css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="../css/theme/ucla.css" id="theme">
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="../lib/css/zenburn.css">
@@ -271,6 +271,7 @@
 
                     <section>
                         <h2>Consistent Navigation</h2>
+                        <p>Use repeating, consistent structures to let users build on what they already know when using your app.</p>
                         <p>Maximum 5 min: Are there unusual changes to the navigation or other page components?</p>
                         <p>Things to Check:
                         <ul>
@@ -307,6 +308,7 @@
                         <p>1.4.4 Resize text: Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. (Level AA)</p>
                         <ul>
                             <li>Use CTRL-+ (CMD-+) to test whether the site is readable at 2x magnification</li>
+                            <li>Sites built using responsive design principles will adapt to a variety of device sizes</li>
                         </ul>
                     </section>
 
@@ -317,6 +319,7 @@
                         <ul>
                             <li>Text that cannot be copied is likely to be inaccessible</li>
                             <li>To test if images of text are being used, try copying any “suspicious” items</li>
+                            <li>If images with text in them are used, be sure text is conveyed elsewhere (alt text)</li>
                         </ul>
                     </section>
 
@@ -342,8 +345,11 @@
                         <h2>Visible Focus</h2>
                         <p>2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)</p>
                         <ul>
+                            <li>Browsers add outlines to focusable DOM objects, don't use CSS for "Ouline:0" unless an alternative
+                            visual indiactor is provided</li>
                             <li>Is there a clear focus indicator when tabbing with keyboard</li>
                             <li>On the homepage & 5 subpages, test focus by tabbing through the page</li>
+                            <li>Script and interactive elements should be made focusable</li>
                         </ul>
                     </section>
 
@@ -368,12 +374,14 @@
 
                     <section>
                         <h2>Images</h2>
+                        <p>Appropriate Alt Text depends on context.  Keep alt text brief and describe functionality and purpose</p>
+                        <p>For purely decorative images use &nbsp;<code>Alt=""</code>
                         <ul>
                             <li>Survey Content: Appropriate Use of ALT text on Images</li>
                             <li>Ensure controls are easy to identify and to enable captioning:
                                 <ul>
                                     <li>Fail if several of those images have alt text = the filename</li>
-                                    <li>Fail if lots of text is embedded in images</li>
+                                    <li>Fail if lots of images have text in an image</li>
                                 </ul>
                             </li>
                         </ul>
@@ -396,7 +404,7 @@
                     <section>
                         <h2>Resources</h2>
                         <ul>
-                            <li>AMP:<a href="https://www.ssbbartgroup.com/amp"><br>https://www.ssbbartgroup.com/amp</a></li>
+
                             <li>Wave:<a href="http://wave.webaim.org/"><br>http://wave.webaim.org/</a></li>
                             <li>Validators:<br><a href="http://www.w3.org/QA/Tools/#validators">http://www.w3.org/QA/Tools/#validators</a></li>
                             <li>Snook.ca Color Contrast:<br><a href="http://snook.ca/technical/colour_contrast/colour.html">http://snook.ca/technical/colour_contrast/colour.html</a></li>
