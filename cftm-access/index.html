@@ -4,79 +4,88 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Web &amp; Mobile Accessibility</title>
+        <title>reveal.js – The HTML Presentation Framework</title>
 
-        <meta name="description" content="">
-        <meta name="author" content="Lloyd Nicks">
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-        <link rel="stylesheet" href="../css/reveal.min.css">
-        <link rel="stylesheet" href="../css/theme/default.css" id="theme">
-        <link rel="stylesheet" href="../css/custom.css">
+        <link rel="stylesheet" href="../css/reveal.css">
+        <link rel="stylesheet" href="../css/theme/black.css" id="theme">
 
-        <!-- For syntax highlighting -->
+        <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="../lib/css/zenburn.css">
 
-        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <!-- Printing and PDF exports -->
         <script>
-                document.write( '<link rel="stylesheet" href="../css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
 
         <!--[if lt IE 9]>
-        <script src="../lib/js/html5shiv.js"></script>
+        <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
     </head>
 
     <body>
-        <div class="reveal">     
+
+        <div class="reveal">
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-            
+
                 <section>
                     <h1 style="font-size:2.8em">Web &amp; Mobile Accessibility</h1>
                     <div style="font-size:0.8em; margin-top: 48px;">
                         <p><strong><a href="http://lnicks.github.io/p/cftm-access" title=
                         "Presentation file on Github">http://lnicks.github.io/p/cftm-access</a></strong></p>
-                
+
                         <p style="font-size:0.7em;">Patrick Burke / <a href="mailto:burke@ucla.edu"
                         target="_blank">burke@ucla.edu</a></p>
-                
+
                         <p style="font-size:0.7em;">Lloyd Nicks / <a href=
                         "mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> /
                         <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> /
                         <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks
                         [Twitter]</a></p>
+
+                        <p style="font-size:0.7em;">Chris Patterson / <a href=
+                        "mailto:chris@ucla.edu" target="_blank">chris@ucla.edu</a> /
+                        <a href="https://github.com/spiritcapsule" target="_blank">spiritcapsule[GitHub]</a> /
+                        <a href="http://twitter.com/spiritcapsule" target="_blank">@spiritcapsule
+                        [Twitter]</a></p>
                     </div>
                 </section>
-                
+
                 <section>
                     <section>
-                        <h2>Current Accessibility Topics</h2> 
+                        <h2>Current Accessibility Topics</h2>
                         <ul>
                             <li>
-                                <p>edX to Improve Access to MOOCs for People With Disabilities:<br>
-                                <a href="http://chronicle.com/article/edX-to-Improve-Access-to-MOOCs/229059">http://chronicle.com/article/edX-to-Improve-Access-to-MOOCs/229059</a>
+                                <p>New Mobile Accessibility Guidelines from W3C<br>
+                                <a href="https://www.w3.org/TR/mobile-accessibility-mapping/">hhttps://www.w3.org/TR/mobile-accessibility-mapping/</a>
                             </li>
                             <li>
-                                <p>FCC Requires Mobile Phone Manufacturers to make browsers accessible
-                                by October 2013:<br>
+                                <p>Google Releases Accessibility Scanner App for Android<br>
                                 <a href=
-                                "http://www.apps4android.org/?p=4600">http://www.apps4android.org/?p=4600</a></p>
+                                "https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor</a></p>
                             </li>
                             <li>
-                                <p>UC Electronic Accessibility Policy goes live:<br>
+                                <p>Google releases platform agnostic Mobile Accessibility Guide<br>
                                 <a href=
-                                "www.ucop.edu/electronic-accessibility/initiative/policy.html">www.ucop.edu/electronic-accessibility/initiative/policy.html</a></p>
+                                "https://www.google.com/design/spec/usability/accessibility.html#accessibility-sound">https://www.google.com/design/spec/usability/accessibility.html</a></p>
                             </li>
 
                         </ul>
                     </section>
                 </section>
-                
+
                 <section>
                     <section>
                         <h2>User Scenarios</h2>
@@ -88,7 +97,7 @@
                             <li>Blind</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Learning Disabilities / Cognitive Impairment</h2>
                         <ul>
@@ -98,79 +107,79 @@
                             <li>Many of these features will be useful to any user in an unpredictable environment (noise, glare, etc.)</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Deaf / Hearing Impairment</h2>
                         <ul>
                             <li>Can use visual interface</li>
-                            <li>Need visual cues for sound events in apps</li> 
+                            <li>Need visual cues for sound events in apps</li>
                             <li>Need captioning for multimedia content</li>
                             <li>Plan apps to display captioned video</li>
                             <li>Provide mechanism for uploading of captioned video and caption files</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Dexterity / Physical Impairment</h2>
                         <ul>
-                            <li>May have difficulty with small buttons, interacting with moving elements, etc.</li> 
-                            <li>Provide large target areas for tap events</li> 
+                            <li>May have difficulty with small buttons, interacting with moving elements, etc.</li>
+                            <li>Provide large target areas for tap events</li>
                             <li>Offer interface customization options if applicable</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Low Vision, color blindness</h2>
                         <ul>
-                            <li>Likely to use magnification (Zoom in iOS, etc.)</li>        
-                            <li>Provide color contrast of 4.5:1 for standard text</li> 
+                            <li>Likely to use magnification (Zoom in iOS, etc.)</li>
+                            <li>Provide color contrast of 4.5:1 for standard text</li>
                             <li>Avoid problem color combinations</li>
                             <li>Avoid text embedded in graphics, which will not let users resize</li>
                         </ul>
                     </section>
-                
+
                     <section>
-                        <h2>Blind</h2>    
+                        <h2>Blind</h2>
                         <ul>
-                            <li>Will have the most difficulty with standard visual interface</li> 
+                            <li>Will have the most difficulty with standard visual interface</li>
                             <li>Primary users of iOS VoiceOver utility</li>
                         </ul>
                     </section>
                 </section>
-                
+
                 <section>
                     <section>
                         <h2>State of Mobile Accessibility</h2>
                         <ul>
                             <li>Goal of web apps is to be cross-platform/interoperable</li>
-                            <li>Accessibility Tools do most of the work but are specific to mobile operating system</li>        
+                            <li>Accessibility Tools do most of the work but are specific to mobile operating system</li>
                             <li>Wide gap in standards, old standards are not up to date with advancing mobile technologies</li>
                             <li>Best strategy for web developers: Use MWBP, with understanding of WCAG 2.0 and awareness of built-in accessibility features of major target platforms</li>
                             <li>Tools like Phonegap/Cordova can save much pain involved in developing for multiple platforms</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Voice Over</h2>
                         <ul>
-                            <li>Apple VoiceOver utility</li>        
-                            <li>Built-in text-to-speech</li>        
-                            <li>Rapid response to user actions</li>        
-                            <li>Two methods of navigation: Flick left/right or tap active screen areas</li>        
+                            <li>Apple VoiceOver utility</li>
+                            <li>Built-in text-to-speech</li>
+                            <li>Rapid response to user actions</li>
+                            <li>Two methods of navigation: Flick left/right or tap active screen areas</li>
                             <li>Altered set of gestures for more reliable interaction</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Android TalkBack</h2>
                         <ul>
-                            <li>Built-in text-to-speech</li>        
-                            <li>Applies to devices that run Android, not just smartphones / tablets</li>        
-                            <li>More User Customizations available (gesture to command)</li>        
+                            <li>Built-in text-to-speech</li>
+                            <li>Applies to devices that run Android, not just smartphones / tablets</li>
+                            <li>More User Customizations available (gesture to command)</li>
                             <li>Heavy customizations, OS fragmentation, &amp; device variability decrease consistency</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Native Platform Tips</h2>
                         <p>iOS</p>
@@ -180,14 +189,15 @@
                         </ul>
                         <p>Android</p>
                         <ul>
+                            <li>Google has released the "Accessibility Scanner" app
                             <li>Many accessibility utilities, but requires more configuration by user</li>
                             <li>More difficult dev environment: must enable Accessibility API</li>
                         </ul>
                     </section>
-                
+
                     <section>
                         <h2>Web &amp; Cross Platform Tips</h2>
-                        <p>PhoneGap/Cordova:</p> 
+                        <p>PhoneGap/Cordova:</p>
                         <ul>
                             <li>Has Accessibility API</li>
                             <li>Best choice for multi-platform development</li>
@@ -203,34 +213,43 @@
                 <section>
                     <section>
                         <h2>Accessibility Testing</h2>
-                        <p>Quick Tests</p> 
+                        <p>Quick Tests</p>
                         <ul>
-                            <li>Automated tests still show many items that require human judgment of accessibility (AMP scores show either 100% or 0% success)</li>
+                            <li>Automated tests still show many items that require human judgment of accessibility; False positives are common and are not comprehensive enough to rely upon</li>
                             <li>Practical / Case based analysis</li>
                             <li>Tests for elements that can only be evaluated by a human</li>
-                            <li>Non technical assessment tools</li>
-                        </ul>
-                    </section>
-        
-                    <section>
-                        <h2>Quick Test Scope</h2>   
-                        <ul>
-                            <li>We aim to create a fast process to make many of those human-judgment assessments</li>
-                            <li>We do not attempt to show how to fix accessibility errors in this talk</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2>Quick Tests Goals</h2>   
+                        <h2>Accessibility Testing Scope</h2>
                         <ul>
-                            <li>Further prioritize the 21 Level A WCAG checkpoints</li>
-                            <li>Do verifiable, repeatable tests for the 13 AA items (that mostly require human judgment)</li>
+                            <li>User Testing: Have a user who is proficient with assistive technology test rather than the developer</li>
+                            <li>Start testing as soon as possible, even during design</li>
+                            <li>Test individual components separately as well as part of the larger project</li>
+
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Quick Test Scope</h2>
+                        <ul>
+                            <li>We aim to create a fast process to make many of those human-judgment assessments</li>
                             <li>Find simple, quick tests that can be applied to large amounts of content</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2>The Tests</h2>   
+                        <h2>Quick Tests Goals</h2>
+                        <ul>
+                            <li>Further prioritize the 21 Level A WCAG checkpoints</li>
+                            <li>Do verifiable, repeatable tests for the 13 AA items (that mostly require human judgment)</li>
+
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>The Tests</h2>
                         <ul>
                             <li>Consistent Navigation</li>
                             <li>Color Contrast</li>
@@ -252,22 +271,22 @@
 
                     <section>
                         <h2>Consistent Navigation</h2>
-                        <p>Maximum 5 min: Are there unusual changes to the navigation or other page components?</p> 
+                        <p>Maximum 5 min: Are there unusual changes to the navigation or other page components?</p>
                         <p>Things to Check:
                         <ul>
                             <li>Consistency between Front page and secondary page navigation</li>
                             <li>Choose a common navigation element and use keyboard only to get there</li>
                         </ul>
                     </section>
-                    
+
                     <section>
-                        <h2>Color Contrast</h2>   
+                        <h2>Color Contrast</h2>
                         <p>1.4.3 Contrast (Minimum): The visual presentation of text and images of text has a contrast ratio of at least 4.5:1 (Level AA)</p>
                     </section>
 
                     <section>
-                        <h2>Color Contrast</h2>  
-                        <p>Run tests on 4-5 potential problem areas, concentrating on extreme cases requiring immediate fix</p> 
+                        <h2>Color Contrast</h2>
+                        <p>Run tests on 4-5 potential problem areas, concentrating on extreme cases requiring immediate fix</p>
                         <ul>
                             <li>WebAIM’s Jared Smith mentions "readability is a continuum", as you can always be more accessible</li>
                             <li>Text at 4.4:1 isn’t suddenly totally illegible. So focus on the biggest problems</li>
@@ -275,7 +294,7 @@
                     </section>
 
                     <section>
-                        <h2>Color Contrast</h2>   
+                        <h2>Color Contrast</h2>
                         <p>Color Contrast Checking Tools</p>
                         <ul>
                             <li>Snook.ca:<br><a href="http://snook.ca/technical/colour_contrast/colour.html">http://snook.ca/technical/colour_contrast/colour.html</a></li>
@@ -284,7 +303,7 @@
                     </section>
 
                     <section>
-                        <h2>Double Size Test</h2>   
+                        <h2>Double Size Test</h2>
                         <p>1.4.4 Resize text: Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. (Level AA)</p>
                         <ul>
                             <li>Use CTRL-+ (CMD-+) to test whether the site is readable at 2x magnification</li>
@@ -292,9 +311,9 @@
                     </section>
 
                     <section>
-                        <h2>Copy Test</h2>   
+                        <h2>Copy Test</h2>
                         <p>1.4.5 Images of Text: If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following: (Level AA)</p>
-                        
+
                         <ul>
                             <li>Text that cannot be copied is likely to be inaccessible</li>
                             <li>To test if images of text are being used, try copying any “suspicious” items</li>
@@ -302,8 +321,8 @@
                     </section>
 
                     <section>
-                        <h2>Logical Structure </h2>  
-                        <p>2.4.6 Headings and Labels: Headings and labels describe topic or purpose. (Level AA)</p> 
+                        <h2>Logical Structure </h2>
+                        <p>2.4.6 Headings and Labels: Headings and labels describe topic or purpose. (Level AA)</p>
                         <ul>
                             <li>Headings should not be used for visual effects, on large blocks of content</li>
                             <li>Use judiciously (too much structure without content is a problem)</li>
@@ -311,7 +330,7 @@
                     </section>
 
                     <section>
-                        <h2>Logical Structure </h2>   
+                        <h2>Logical Structure </h2>
                         <ul>
                             <li>Are headings used for logical structure? </li>
                             <li>Does structure make sense? </li>
@@ -320,7 +339,7 @@
                     </section>
 
                     <section>
-                        <h2>Visible Focus</h2>   
+                        <h2>Visible Focus</h2>
                         <p>2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. (Level AA)</p>
                         <ul>
                             <li>Is there a clear focus indicator when tabbing with keyboard</li>
@@ -348,7 +367,7 @@
                     </section>
 
                     <section>
-                        <h2>Images</h2>   
+                        <h2>Images</h2>
                         <ul>
                             <li>Survey Content: Appropriate Use of ALT text on Images</li>
                             <li>Ensure controls are easy to identify and to enable captioning:
@@ -361,7 +380,7 @@
                     </section>
 
                     <section>
-                        <h2>References</h2>            
+                        <h2>References</h2>
                         <ul>
                             <li>UCLA Disabilities and Computing Program:<br>
                             <a href="http://dcp.ucla.edu">http://dcp.ucla.edu</a></li>
@@ -375,7 +394,7 @@
                     </section>
 
                     <section>
-                        <h2>Resources</h2>   
+                        <h2>Resources</h2>
                         <ul>
                             <li>AMP:<a href="https://www.ssbbartgroup.com/amp"><br>https://www.ssbbartgroup.com/amp</a></li>
                             <li>Wave:<a href="http://wave.webaim.org/"><br>http://wave.webaim.org/</a></li>
@@ -386,47 +405,51 @@
                     </section>
 
                 </section>
-                
+
                 <section>
                     <h1>Thank You</h1>
                     <div style="font-size:0.8em; margin-top: 48px;">
                         <p><strong><a href="http://lnicks.github.io/p/accessibility" title="Presentation file on Github">http://lnicks.github.io/p/accessibility</a></strong></p>
-                        <p style="font-size:0.7em;">Patrick Burke / <a href="mailto:burke@ucla.edu" target="_blank">burke@ucla.edu</a></p>        
+                        <p style="font-size:0.7em;">Patrick Burke / <a href="mailto:burke@ucla.edu" target="_blank">burke@ucla.edu</a></p>
                         <p style="font-size:0.7em;">Lloyd Nicks / <a href="mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> / <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> / <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks [Twitter]</a></p>
+                         <p style="font-size:0.7em;">Chris Patterson / <a href=
+                        "mailto:chris@ucla.edu" target="_blank">chris@ucla.edu</a> /
+                        <a href="https://github.com/spiritcapsule" target="_blank">spiritcapsule[GitHub]</a> /
+                        <a href="http://twitter.com/spiritcapsule" target="_blank">@spiritcapsule
+                        [Twitter]</a></p>
                     </div>
                 </section>
-                
+
             </div>
         </div>
-		<script src="../lib/js/head.min.js"></script>
-    <script src="../js/reveal.min.js"></script>
-    <script>
 
-        // Full list of configuration options available here:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
+        <script src="../lib/js/head.min.js"></script>
+        <script src="../js/reveal.js"></script>
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        <script>
 
-            // Parallax scrolling
-            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-            // parallaxBackgroundSize: '2100px 900px',
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
                     { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: '../plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-            ]
-        });
-    </script>
+                    { src: '../plugin/zoom-js/zoom.js', async: true },
+                    { src: '../plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
     </body>
 </html>
