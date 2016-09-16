@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Responsive Design & Content Strategy</title>
+        <title>Responsive Design &amp; Content Strategy</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -29,6 +29,13 @@
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
 
+
+        <style>
+            code{
+                background-color:#233648;
+                color:#ffcc00;
+            }
+        </style>
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
@@ -41,10 +48,10 @@
             <div class="slides">
 
                 <section>
-                    <h1 style="font-size:2.8em">Responsive Design & Content Strategy<</h1>
+                    <h1 style="font-size:2.8em">Responsive Design &amp; Content Strategy</h1>
                     <div style="font-size:0.8em; margin-top: 48px;">
-                        <p><strong><a href="http://lnicks.github.io/p/cftm-access" title=
-                        "Presentation file on Github">http://lnicks.github.io/p/cftm-access</a></strong></p>
+                        <p><strong><a href="http://lnicks.github.io/p/mmwcon-responsive" title=
+                        "Presentation file on Github">http://lnicks.github.io/p/mmwcon-responsive</a></strong></p>
 
                         <p style="font-size:0.7em;">Lloyd Nicks / <a href=
                         "mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> /
@@ -239,46 +246,162 @@
                     </section>
 
                 </section>
+                <section>
+                    <section>
+                        <h2>Boostrap Primer<h2/>
+                    </section>
+
+                    <section>
+                        <h2>Which front end framework to use</h2>
+                        <p>We need to be flexible enough to use any of them, as we don’t always have the luxury to start the project from scratch</p>
+                        <p>Bootstrap is the most popular, with version 4 being worked on soon</p>
+                        <p>Demo template for this workshop at : XXX</p>
+                    </section>
+
+                    <section>
+                        <h2>New in Bootstrap 4</h2>
+                        <p>In v4, Bootstrap came up with it’s unique browser defaults unification code named Reboot. Reboot mostly follows Normalize.css adding  two main concepts of its own</p>
+                        <ul>
+                            <li>Typographical measures are all in rems</li>
+                            <li>Only one sided vertical margin is being used, <code>margin-bottom</code>. As vertical margins can collapse, yielding unexpected results</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>HTML Behaviors in Bootstrap</h2>
+                        <ul>
+                            <li>The <code> box-sizing </code> attribute is globally set on every element—including <code> *:before </code> and <code> *:after </code>, to <code> border-box </code>. This ensures that the declared width of element is never exceeded due to padding or border.</li>
+                            <li>A base <code> font-size: 16px </code> is declared on the <code> &lt;html&gt;</code> </code> and <code> font-size: 1rem </code> on the <code> &lt;body&gt; </code> for easy responsive type-scaling via media queries.
+</li>
+                        <</ul>
+                    </section>
+
+                    <section>
+                        <h2>Further HTML Behaviors in Bootstrap</h2>
+                        <ul>
+                            <li>The <code>&lt;body&gt;</code>   also sets a global <code>font-family</code> and <code>line-height</code>; this is inherited later by some form elements to prevent font inconsistencies</li>
+                            <li>For safety, the <code>&lt;body&gt;</code> has a declared <code>background-color</code>, defaulting to <code>#fff</code></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Further HTML sBehaviors in Bootstrap</h2>
+                        <ul>
+                            <li><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>,  <code>&lt;p&gt;</code> tags have <code>margin-top</code> removed. <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> have <code>margin-bottom:0.5rem</code> and <code>&lt;p&gt;</code> has <code>margin-bottom: 1rem</code></li>
+                            <li><code>&lt;ul&gt;</code>,  <code>&lt;ol&gt;</code> and  <code>&lt;dl&gt;</code> have <code>margin-top</code> removed and <code>margin-bottom: 1rem</code></li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Typography and Utility Classes</h2>
+                        <ul>
+                            <li>Use a native font stack that selects the best font-family for each OS and device</li>
+                            <li>It is recommended to use the <code>$font-family-base</code>, <code>$font-size-base</code>, and <code>$line-height-base </code>attributes for <code>&lt;body&gt;</code>tag</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <ul>
+                            <li>Global link color via <code>$link-color</code> and underlines need to be applied only on <code>:hover</code></li>
+                            <li>Use <code>$body-bg</code> to set a <code>background-color</code> on the <code>&lt;body&gt;</code> (<code>#fff</code> by default)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <ul>
+                            <li><code>.lead</code> component class has been added to make the paragraph stand out</li>
+                            <li>If you want to make the paragraphs styled as <code>&lt;mark&gt;</code> and <code>&lt;small&gt;</code> you should use <code>.mark</code> and <code>.small</code> utility classes</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p>Bootstrap utilities are basically classes  with single purpose, they help as minimize the amount of CSS we write.</p>
+                        <p>Naming format is the following: <code>{property}-{sides}-{size}</code></p>
+                        <ul>
+                            <li><code>m</code>  stands for margin</li>
+                            <li><code>p</code> stands for padding</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Sides</h2>
+                        <ul style="font-size:32px;">
+                            <li><code>t</code> - for classes that set <code>margin-top</code> or <code>padding-top</code></li>
+                            <li><code>b</code> - for classes that set <code>margin-bottom</code> or <code>padding-bottom</code></li>
+                            <li><code>l</code> - for classes that set <code>margin-left</code> or <code>padding-left</code></li>
+                            <li><code>r</code> - for classes that set <code>margin-right</code> or <code>padding-right</code></li>
+                            <li><code>x</code> - for classes that set both <code>*-left</code> and <code>*-right</code></li>
+                            <li><code>y</code> - for classes that set both <code>*-top</code> and <code>*-bottom</code></li>
+                            <li><code>a</code> - for classes that set a <code>margin</code> or <code>padding</code> on all 4 sides of the element</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Sizes</h2>
+                        <ul style="font-size:32px;">
+                            <li><code>0</code> - for classes which eliminate the <code>margin</code> or <code>padding</code> by<br/> setting it to <code>0</code></li>
+                            <li><code>1</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer-x</code> or <code>$spacer-y</code></li>
+                            <li><code>2</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer-x * 1.5</code> or <code>$spacer-y * 1.5</code></li>
+                            <li><code>3</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer-x * 3</code> or <code>$spacer-y * 3</code></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Bootstrap 4 cards</h2>
+                        <p>Cards are probably the most exciting new feature in Bootstrap 4</p>
+                        <p>The card is basically a Flexible and Extensible Container of all types of content, including Headers, Footers, HTML tags, images, etc…</p>
+                        <p>In Bootstrap 4 cards replace old panels, wells and thumbnail of Bootstrap 3</p>
+                    </section>
+
+                    <section>
+                    <pre>
+                        <code style="max-height:500px; font-size:14px;">
+  <div class="card">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Lorem Ispum</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Lorem ipsum dolor</li>
+        <li class="list-group-item">Lorem ipsum dolor</li>
+        <li class="list-group-item">Lorem ipsum dolor</li>
+      </ul>
+      <div class="card-block">
+        <a href="#" class="card-link">Lorem Ispum</a>
+        <a href="#" class="card-link">Lorem Ispum</a>
+      </div>
+    </div>
+                        </code>
+                    </pre>
+                    </section>
+
+                    <section>
+                        <h2>Demo Code</h2>
+                        <a href="demo.html" target="_blank">Download Demo HTML Page</a>
+                    </section>
+                </section>
 
                 <section>
                     <section>
                         <h2>References</h2>
-                        <ul>
-                            <li>UCLA Disabilities and Computing Program:<br>
-                            <a href="http://dcp.ucla.edu">http://dcp.ucla.edu</a></li>
-                            <li>W3c Easy Checks:<br>
-                            <a href="http://www.w3.org/WAI/EO/Drafts/eval/checks">http://www.w3.org/WAI/EO/Drafts/eval/checks</a></li>
-                            <li>BBC Mobile Accessibility Guidelines 0.8<br>
-                            <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile_access.shtml">http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile_access.shtml</a></li>
-                            <li>WebAIM:<br>
-                            <a href="http://webaim.org/">http://webaim.org/</a></li>
-                        </ul>
                     </section>
+
+
 
                     <section>
-                        <h2>Resources</h2>
-                        <ul>
-
-                            <li>Wave:<a href="http://wave.webaim.org/"><br>http://wave.webaim.org/</a></li>
-                            <li>Validators:<br><a href="http://www.w3.org/QA/Tools/#validators">http://www.w3.org/QA/Tools/#validators</a></li>
-                            <li>Snook.ca Color Contrast:<br><a href="http://snook.ca/technical/colour_contrast/colour.html">http://snook.ca/technical/colour_contrast/colour.html</a></li>
-                            <li>Juicy Studio Color Contrast:<br><a href="http://juicystudio.com/services/luminositycontrastratio.php">http://juicystudio.com/services/luminositycontrastratio.php</a></li>
-                        </ul>
-                    </section>
-
+                        <h1>Thank You</h1>
+                        <div style="font-size:0.8em; margin-top: 48px;">
+                            <p><strong><a href="http://lnicks.github.io/p/mmwcon-responsive" title="Presentation file on Github">http://lnicks.github.io/p/mmwcon-responsive</a></strong></p>
+                            <p style="font-size:0.7em;">Lloyd Nicks / <a href="mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> / <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> / <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks [Twitter]</a></p>
+                             <p style="font-size:0.7em;">Hayk Zakaryan / <a href=
+                            "mailto:hzakaryan@oit.ucla.edu" target="_blank">hzakaryan@oit.ucla.edu</a> /
+                            <a href="https://github.com/haykz7777" target="_blank">haykz7777[GitHub]</a>
+                        </div>
                 </section>
-
-                <section>
-                    <h1>Thank You</h1>
-                    <div style="font-size:0.8em; margin-top: 48px;">
-                        <p><strong><a href="http://lnicks.github.io/p/accessibility" title="Presentation file on Github">http://lnicks.github.io/p/accessibility</a></strong></p>
-                        <p style="font-size:0.7em;">Lloyd Nicks / <a href="mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> / <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> / <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks [Twitter]</a></p>
-                         <p style="font-size:0.7em;">Hayk Zakaryan / <a href=
-                        "mailto:hzakaryan@oit.ucla.edu" target="_blank">hzakaryan@oit.ucla.edu</a> /
-                        <a href="https://github.com/haykz7777" target="_blank">haykz7777[GitHub]</a>
-                    </div>
                 </section>
-
             </div>
         </div>
 
