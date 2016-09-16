@@ -35,6 +35,18 @@
                 background-color:#233648;
                 color:#ffcc00;
             }
+
+            .addy .last-name, .addy .first-name, .addy .street-address, .addy .city, .addy .state, .addy .zip {
+                display:inline-block;
+            }
+
+            .addy .last-name::after, .addy .street-address::after, .addy .city::after {
+                content:",";
+            }
+
+            p.addy, div.addy {
+                font-size:24px;
+            }
         </style>
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
@@ -73,16 +85,16 @@
 
                     <section>
                         <h3>Full content available on mobile</h3>
-                        <p>The 2016 comScore report says US users spend 60% of screen time in front of mobile devices.(footnote)</p>
+                        <p>The 2016 comScore report says US users spend 60% of screen time in front of mobile devices</p>
                     </section>
 
                     <section>
-                        <img src="img/2016_mmwcon_mobile_screentime.png" alt="US users spend 60% of screen time in front of mobile devices">
+                        <img src="img/2016-mmwcon-mobile-screentime.png" alt="US users spend 60% of screen time in front of mobile devices">
                     </section>
 
                     <section>
                         <h3>Easy navigation without distractions</h3>
-                        <p>On the average Web page, users have time to read at most 28% of the words during an average visit; 20% is more likely. </p>
+                        <p>On the average Web page, users have time to read at most 28% of the words during an average visit; 20% is more likely </p>
                     </section>
 
                     <section>
@@ -96,7 +108,7 @@
                     </section>
 
                     <section>
-                        <img src="img/2016_mmwcon_performance.png" alt"Number of users expecting less than 1 second response time has grown to 25% in 5 years">
+                        <img src="img/2016-mmwcon-performance.png" alt"Number of users expecting less than 1 second response time has grown to 25% in 5 years">
                     </section>
 
                     <section>
@@ -109,7 +121,7 @@
                     </section>
 
                     <section>
-                        <img src="img/2016_mmwcon_mi.png" alt"Mission Impossible Logo">
+                        <img src="img/2016-mmwcon-mi.png" alt"Mission Impossible Logo">
                         <p>How do you go about making all of these things happen at once?</p>
                     </section>
                 </section>
@@ -134,6 +146,35 @@
                     </section>
 
                     <section>
+                        <pre><code>
+
+<p>Lloyd Nicks, 555 UCLA Ave, Los Angeles, CA 90024</p>
+
+<div class="first-name">Lloyd</div>
+<div class="last-name">Nicks</div>
+<div class="street-address">555 UCLA Ave</div>
+<div class="city">Los Angeles</div>
+<div class="state">CA</div>
+<div class="zip">90024</div>
+</code></pre>
+</section>
+
+<section>
+
+<p>All in one <code>&lt;p&gt;</code> tag<p>
+<p class="addy">Lloyd Nicks, 555 UCLA Ave, Los Angeles, CA 90024<p>
+<p>Divs formatted using CSS only</p>
+<div class="addy">
+    <div class="first-name" style='display:inline-block;'>Lloyd</div>
+    <div class="last-name" style='display:inline-block'>Nicks</div>
+    <div class="street-address">555 UCLA Ave</div>
+    <div class="city">Los Angeles</div>
+    <div class="state">CA</div>
+    <div class="zip">90024</div>
+</div>
+</section>
+
+                    <section>
                         <h3>Content Inventory Audit</h3>
                         <p>Key Audit Criteria</p>
                         <ul>
@@ -147,7 +188,7 @@
                         <h3>How is the content delivered?</h3>
                         <p>Understand how the content is delivered (CMS, API) and limitations of the platform.</p>
                         <ul>
-                            <li>45% of top 10 million websites use a known CMS (W3Techs, 2016)</li>
+                            <li>45% of top 10 million websites use a known CMS (source: W3Techs, 2016)</li>
                             <li>Content structure / stored might have an impact on how it is presented</li>
                         </ul>
                     </section>
@@ -165,16 +206,27 @@
                         </ul>
                     </section>
 
-                   <section>
+                    <section>
+                        <h3>Flow Diagrams</h3>
+                        <p style="font-size:32px">Responsive Design is a lot like a sliding puzzle. Each piece has an image of its own, but how they're arranged together paints a fuller picture</p>
+                        <img src="img/2016-mmwcon-puzzle-left.png" alt="Sliding Puzzle Unsolved">
+                    </section>
+
+                    <section>
+                        <img src="img/2016-mmwcon-puzzle-right.png" alt="Sliding Puzzle solved">
+                    </section>
+
+                    <section>
                         <ul>
-                            <li>Flow Diagrams
-                                <ul>
-                                    <li>Sitemaps provide a basis for navigation, flowcharts show the path a user takes</li>
-                                    <li>UI pathways don't always follow a traditional 'page' model</li>
-                                </ul>
-                            </li>
+                            <li>Sitemaps provide a basis for navigation, flowcharts show the path a user takes</li>
+                            <li>UI pathways don't always follow a traditional 'page' model</li>
                         </ul>
                     </section>
+
+                    <section>
+                        <img src="img/2016-mmwcon-responsive-flow.png" alt="Variants of how a mobile layout might change for mobile">
+                    </section>
+
 
                 </section>
 
@@ -203,6 +255,10 @@
                     </section>
 
                     <section>
+                        <img src='img/2016-mmwcon-wireframe.jpeg' alt="Multiple wireframes for possible arrangements">
+                    </section>
+
+                    <section>
                         <h2>Navigation</h2>
                         <p>The Physics behind a condensed screen size means that there will always conflict between the screen size and the amount of information you can put onto it.  There comes a point where usability is lost by not providing enough navigation (NNGgroup)</p>
                         <p>Site map shouldn't change, just how the content is presented</p>
@@ -219,13 +275,35 @@
 
                     <section>
                         <h2>Does device and size matter?</h2>
-                        <ul>
-                            <li>A year ago, there were over 24,000 different web enabled android devices (IMG)</li>
-                            <li>Screensize &amp; aspect ratio are just as inconsistent (IMG)</li>
-                            <li>Design for common breakpoints / grid solutions</li>
-                        </ul>
+                        <p>A year ago, there were over 24,000 different web enabled android devices (source: OpenSignal 2015 Report)</p>
+                        <img style="max-width:55%" src="img/2016-mmwcon-android-frag.png" alt="Android Fragmentation 2015">
                     </section>
 
+                    <section>
+                        <p>Screensize &amp; aspect ratio are just as inconsistent</p>
+                        <img src="img/2016-mmwcon-android-screen-frag.png">
+                    </section>
+                    <section>
+                        <p>Common breakpoints are your friend</p>
+                        <p>Bootstrap 3 breakpoints</p>
+                        <pre><code style="font-size:16px;">
+    /* Custom, iPhone Retina */
+    @media only screen and (min-width : 320px) {}
+
+    /* Extra Small Devices, Phones */
+    @media only screen and (min-width : 480px) {}
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {}
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {}
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {}
+    </code></pre>
+
+                    </section>
                     <section>
                         <h2>Flat Designs</h2>
                         <p>Pros:</p>
@@ -255,7 +333,7 @@
                         <h2>Which front end framework to use</h2>
                         <p>We need to be flexible enough to use any of them, as we don’t always have the luxury to start the project from scratch</p>
                         <p>Bootstrap is the most popular, with version 4 being worked on soon</p>
-                        <p>Demo template for this workshop at : XXX</p>
+                        <p><a href="demo.html" target="_blank">Download Demo HTML Page</a></p>
                     </section>
 
                     <section>
@@ -387,12 +465,6 @@
                 </section>
 
                 <section>
-                    <section>
-                        <h2>References</h2>
-                    </section>
-
-
-
                     <section>
                         <h1>Thank You</h1>
                         <div style="font-size:0.8em; margin-top: 48px;">
