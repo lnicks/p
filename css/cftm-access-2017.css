@@ -1,0 +1,97 @@
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px; }
+
+html.manhattan body {
+  background: url("assets/img/manhattan-nasa.png");
+  background-position: center;
+  background-size: 100%; }
+
+.reveal .controls {
+  background-color: rgba(0, 0, 0, 0.7); }
+.reveal .overlay-light {
+  background-color: rgba(255, 255, 255, 0.8); }
+.reveal .overlay-dark {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: .25rem;
+  display: block; }
+  .reveal .overlay-dark p {
+    margin-top: 0; }
+.reveal .graph-side {
+  font-size: 2rem; }
+
+.flex {
+  display: flex; }
+  .flex > div {
+    padding: .5rem; }
+  .flex .flex-left {
+    width: 50%; }
+  .flex .flex-right {
+    width: 50%; }
+    .flex .flex-right img {
+      display: block;
+      max-width: 90%; }
+    .flex .flex-right figcaption .cc {
+      display: block;
+      max-width: 90%;
+      font-size: .6rem;
+      text-align: right; }
+
+/**
+ * Initialiazing a `footnotes` counter on the wrapper
+ */
+article {
+  counter-reset: footnotes; }
+
+/**
+ * Inline footnotes references
+ * 1. Increment the counter at each new reference
+ * 2. Reset link styles to make it appear like regular text
+ */
+a[aria-describedby="footnote-label"] {
+  counter-increment: footnotes;
+  /* 1 */
+  text-decoration: none;
+  /* 2 */
+  color: inherit;
+  /* 2 */
+  cursor: default;
+  /* 2 */
+  outline: none;
+  /* 2 */ }
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+a[aria-describedby="footnote-label"]::after {
+  content: "[" counter(footnotes) "]";
+  /* 1 */
+  vertical-align: super;
+  /* 2 */
+  font-size: 0.5em;
+  /* 3 */
+  margin-left: 2px;
+  /* 4 */
+  color: blue;
+  /* 5 */
+  text-decoration: underline;
+  /* 5 */
+  cursor: pointer;
+  /* 5 */ }
+
+/**
+ * Resetting the default focused styles on the number
+ */
+a[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px; }
+
+/*# sourceMappingURL=cftm-access-2017.css.map */
