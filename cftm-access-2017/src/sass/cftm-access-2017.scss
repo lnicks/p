@@ -13,34 +13,61 @@ html.manhattan body {
 }
 
 .reveal {
-
-  .controls {
-    background-color: rgba(0,0,0,0.7);
-  }
-  .overlay-light {
-    background-color: rgba(255,255,255,0.8);
-  }
-
-  .overlay-dark {
-    background-color: rgba(0,0,0,0.7);
-    padding:.25rem;
-    display:block;
-
-    p {
-      margin-top:0;
+    .controls {
+        background-color: rgba(0, 0, 0, 0.7);
     }
-  }
 
-  .graph-side {
-    font-size:2rem;
-  }
+    .overlay-light {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .overlay-dark {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: .25rem;
+        display: block;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    .graph-side {
+        font-size: 2rem;
+    }
+
+    figure {
+        height: 75%;
+
+        .dexcom-ios {
+            height: 75%;
+            display: block;
+            float: right;
+        }
+    }
+
+    .dexcom-watch {
+        display: block;
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pour {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+
+        ul {
+            width: 50%;
+        }
+    }
 }
 
 .flex {
     display: flex;
 
     > div {
-      padding:.5rem;
+        padding: .5rem;
     }
 
     .flex-left {
@@ -57,21 +84,20 @@ html.manhattan body {
 
         figcaption {
             .cc {
-                display:block;
-                max-width:90%;
+                display: block;
+                max-width: 90%;
                 font-size: .6rem;
-                text-align:right;
+                text-align: right;
             }
         }
     }
 }
 
-
 /**
  * Initialiazing a `footnotes` counter on the wrapper
  */
 article {
-  counter-reset: footnotes;
+    counter-reset: footnotes;
 }
 
 /**
@@ -80,11 +106,21 @@ article {
  * 2. Reset link styles to make it appear like regular text
  */
 a[aria-describedby="footnote-label"] {
-  counter-increment: footnotes; /* 1 */
-  text-decoration: none; /* 2 */
-  color: inherit; /* 2 */
-  cursor: default; /* 2 */
-  outline: none; /* 2 */
+    counter-increment: footnotes;
+
+    /* 1 */
+    text-decoration: none;
+
+    /* 2 */
+    color: inherit;
+
+    /* 2 */
+    cursor: default;
+
+    /* 2 */
+    outline: none;
+
+    /* 2 */
 }
 
 /**
@@ -96,19 +132,33 @@ a[aria-describedby="footnote-label"] {
  * 5. Reset link styles on the number to show it's usable
  */
 a[aria-describedby="footnote-label"]::after {
-  content: '[' counter(footnotes) ']'; /* 1 */
-  vertical-align: super; /* 2 */
-  font-size: 0.5em; /* 3 */
-  margin-left: 2px; /* 4 */
-  color: blue; /* 5 */
-  text-decoration: underline; /* 5 */
-  cursor: pointer; /* 5 */
+    content: "[" counter(footnotes) "]";
+
+    /* 1 */
+    vertical-align: super;
+
+    /* 2 */
+    font-size: 0.5em;
+
+    /* 3 */
+    margin-left: 2px;
+
+    /* 4 */
+    color: blue;
+
+    /* 5 */
+    text-decoration: underline;
+
+    /* 5 */
+    cursor: pointer;
+
+    /* 5 */
 }
 
 /**
  * Resetting the default focused styles on the number
  */
 a[aria-describedby="footnote-label"]:focus::after {
-  outline: thin dotted;
-  outline-offset: 2px;
+    outline: thin dotted;
+    outline-offset: 2px;
 }
