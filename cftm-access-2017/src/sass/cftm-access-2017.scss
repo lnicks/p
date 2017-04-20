@@ -37,13 +37,13 @@ html.manhattan body {
 
     figure {
         height: 75%;
+    }
 
-        .dexcom-ios {
-            height: 75%;
+    .dexcom-ios {
+            height: 50%;
             display: block;
             float: right;
         }
-    }
 
     .dexcom-watch {
         display: block;
@@ -61,33 +61,41 @@ html.manhattan body {
             width: 50%;
         }
     }
-}
 
-.flex {
-    display: flex;
-
-    > div {
-        padding: .5rem;
+    sup {
+        font-size: 1.5rem;
     }
 
-    .flex-left {
-        width: 50%;
-    }
+    .flex {
+        display: flex;
 
-    .flex-right {
-        width: 50%;
-
-        img {
-            display: block;
-            max-width: 90%;
+        > div {
+            padding: .5rem;
         }
 
-        figcaption {
-            .cc {
+        figure {
+          height:auto;
+        }
+
+        .flex-left {
+            width: 50%;
+        }
+
+        .flex-right {
+            width: 50%;
+
+            img {
                 display: block;
                 max-width: 90%;
-                font-size: .6rem;
-                text-align: right;
+            }
+
+            figcaption {
+                .cc {
+                    display: block;
+                    max-width: 90%;
+                    font-size: .6rem;
+                    text-align: right;
+                }
             }
         }
     }
