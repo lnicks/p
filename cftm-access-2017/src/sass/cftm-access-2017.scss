@@ -13,6 +13,10 @@ html.manhattan body {
 }
 
 .reveal {
+
+    a:hover, a:focus {
+      text-decoration:underline;
+    }
     .controls {
         background-color: rgba(0, 0, 0, 0.7);
     }
@@ -40,10 +44,10 @@ html.manhattan body {
     }
 
     .dexcom-ios {
-            height: 50%;
-            display: block;
-            float: right;
-        }
+        height: 50%;
+        display: block;
+        float: right;
+    }
 
     .dexcom-watch {
         display: block;
@@ -66,6 +70,15 @@ html.manhattan body {
         font-size: 1.5rem;
     }
 
+    h2.h2-down {
+        padding-top: 50px;
+    }
+
+    .footnotes {
+          font-size:1.5rem;
+
+        }
+
     .flex {
         display: flex;
 
@@ -74,7 +87,7 @@ html.manhattan body {
         }
 
         figure {
-          height:auto;
+            height: auto;
         }
 
         .flex-left {
@@ -98,14 +111,20 @@ html.manhattan body {
                 }
             }
         }
+
+
     }
+}
+
+a.footy, a.footy:hover, a.footy:focus {
+  color:#fff;
 }
 
 /**
  * Initialiazing a `footnotes` counter on the wrapper
  */
 article {
-    counter-reset: footnotes;
+  counter-reset: footnotes;
 }
 
 /**
@@ -113,22 +132,12 @@ article {
  * 1. Increment the counter at each new reference
  * 2. Reset link styles to make it appear like regular text
  */
-a[aria-describedby="footnote-label"] {
-    counter-increment: footnotes;
-
-    /* 1 */
-    text-decoration: none;
-
-    /* 2 */
-    color: inherit;
-
-    /* 2 */
-    cursor: default;
-
-    /* 2 */
-    outline: none;
-
-    /* 2 */
+[aria-describedby="footnote-label"] {
+  counter-increment: footnotes; /* 1 */
+  text-decoration: none; /* 2 */
+  color: inherit; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
 }
 
 /**
@@ -139,34 +148,68 @@ a[aria-describedby="footnote-label"] {
  * 4. Slightly offset the number from the text
  * 5. Reset link styles on the number to show it's usable
  */
-a[aria-describedby="footnote-label"]::after {
-    content: "[" counter(footnotes) "]";
+[aria-describedby="footnote-label"]::after {
 
-    /* 1 */
-    vertical-align: super;
+  vertical-align: super; /* 2 */
+  font-size: 0.5em; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: #1496BB; /* 5 */
+  text-decoration: underline; /* 5 */
+  cursor: pointer; /* 5 */
+}
 
-    /* 2 */
-    font-size: 0.5em;
+#cite-1 [aria-describedby="footnote-label"]::after {
+  content: '1'; /* 1 */
+}
 
-    /* 3 */
-    margin-left: 2px;
 
-    /* 4 */
-    color: blue;
+#cite-2 [aria-describedby="footnote-label"]::after {
+  content: '2'; /* 1 */
+}
 
-    /* 5 */
-    text-decoration: underline;
+#cite-3 [aria-describedby="footnote-label"]::after {
+  content: '3'; /* 1 */
+}
 
-    /* 5 */
-    cursor: pointer;
+#cite-4 [aria-describedby="footnote-label"]::after {
+  content: '4'; /* 1 */
+}
 
-    /* 5 */
+#cite-5 [aria-describedby="footnote-label"]::after {
+  content: '5'; /* 1 */
 }
 
 /**
  * Resetting the default focused styles on the number
  */
-a[aria-describedby="footnote-label"]:focus::after {
-    outline: thin dotted;
-    outline-offset: 2px;
+[aria-describedby="footnote-label"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+}
+
+[aria-label="Back to content"] {
+  font-size: 0.8em;
+}
+
+/**
+ * Highlight target note
+ */
+footer :target {
+  background: yellow;
+}
+
+/**
+ * Visually hidden yet accessible content
+ */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.p {
+  text-align: center;
+  font-size: .75em;
+  padding-top: 150px;
 }
