@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Getting Our Head in the Cloud</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="first">
+                <h1 style="font-size:2.8em">Getting Our Head in the Cloud</h1>
+                <div style="font-size:0.8em; margin-top: 48px;">
+                    <p><strong><a href="http://lnicks.github.io/p/uctech-cloud" title="Presentation file on Github">http://lnicks.github.io/p/uctech-cloud</a></strong></p>
+                    <p style="font-size:0.7em;">Lloyd Nicks / <a href="mailto:lnicks@oit.ucla.edu" target="_blank">lnicks@oit.ucla.edu</a> /
+                        <a href="https://github.com/lnicks" target="_blank">lnicks [GitHub]</a> /
+                        <a href="http://twitter.com/lloydnicks" target="_blank">@lloydnicks
+                            [Twitter]</a></p>
+                </div>
+            </section>
+            <section>
+                <h2>UCLA OIT's Webteam</h2>
+                <ul>
+                    <li>Serving UCLA for 15+ years</li>
+                    <li>5 team members</li>
+                    <li>Team members are cross trained, full stack developers</li>
+                    <li>Bespoke sites built to support research initiatives</li>
+                    <li>Accessibility oriented</li>
+                    <ul>
+                    </ul>
+            </section>
+            <section>
+                <h2>Prior to the cloud</h2>
+                <ul>
+                    <li>Multiple, long term static sites</li>
+                    <li>Variety of early form CMS instances</li>
+                    <li>Did not manage our own servers</li>
+                    <li>Servers were not in parity</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Current Infrastructure</h2>
+                <ul>
+                    <li>Mixed AWS & on prem servers</li>
+                    <li>Primarily Drupal 7 & 8, with a touch of WP</li>
+                    <li>Highly automated maintenance & monitoring</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Common Scenarios</h2>
+                <ul>
+                    <li>Multiple Department sites w/ similar backend</li>
+                    <li>Completely custom sites built from the ground up</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Challenges</h2>
+                <section>
+                    <ul>
+                        <li>Manual processes</li>
+                        <li>Different Versions of everything, everywhere</li>
+                        <li>Prone to error</li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="img/sudo.jpg">
+                </section>
+                <section>
+                    <h3>Spot the Difference?</h3>
+                    <code>sudo chown -r apache:apache *</code>
+                    <br />
+                    <span> or</span>
+                    <br />
+                    <code>sudo chown -r apache:apache /*
+                    </code>
+                </section>
+            </section>
+            <section>
+                <h2>Our Needs</h2>
+                <section>
+                    <ul>
+                        <li>Flexible</li>
+                        <li>Scales</li>
+                        <li>Low Maintenance</li>
+                        <li>Cost Effective</li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="img/wantitall.jpg">
+                </section>
+            </section>
+            <section>
+                <h2>Solutions</h2>
+                <ul>
+                    <li>Establish a development & deployment pipeline</li>
+                    <li>Normalize our codebase</li>
+                    <li>Leverage Cloud Services</li>
+                    <li>Automation</li>
+                </ul>
+            </section>
+            <section>
+                <h2>What do we mean by Cloud?</h2>
+                <section>
+                    <ul>
+                        <li>Services that run on the internet instead of your local computer</li>
+                        <li>Three types of cloud sevices:
+                            <ul>
+                                <li>SaaS: Traditional one stop services, think google docs, dropbox, or mailchimp</li>
+                                <li>PaaS: Platform & frameworks that are built to scale that allow developers to focus on application code. Private software, API’s.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>IAAS</h2>
+                    <ul>
+                        <li>Infrastructure as a Service, they provide the hardware, you do the rest</li>
+                        <li>Shared responsibility:
+                            <ul>
+                                <li>Hardware platform entirely managed by cloud provider</li>
+                                <li>You’re in charge of the rest</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Why IaaS in the Cloud?</h2>
+                    <ul>
+                        <li>Flexibility</li>
+                        <li>Redundancy</li>
+                        <li>No need to provision hardware / maintenance</li>
+                        <li>Costs</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2>Leveraging AWS</h2>
+                <section>
+                    <ul>
+                        <li>EC2</li>
+                        <li>Security Groups</li>
+                        <li>VPC</li>
+                        <li>RDS</li>
+                        <li>ElastiCache</li>
+                    </ul>
+                </section>
+                <section>
+                    <img class="network" src="img/uctech-network.png" alt="A sample network using the 5 previous AWS services" />
+                </section>
+            </section>
+            <section>
+                <h2>The Case for Automation</h2>
+                <ul>
+                    <li>Speed</li>
+                    <li>Accuracy</li>
+                    <li>Easy to Implement</li>
+                    <li>Security</li>
+                    <li>Cost</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Software</h2>
+                <ul>
+                    <li>LAMP</li>
+                    <li>Jenkins</li>
+                    <li>Build Tools</li>
+                    <li>Github</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Drupal Architecture</h2>
+                <ul>
+                    <li>Centralized Drupal repository</li>
+                    <li>No settings stored in repo</li>
+                    <li>Database credentials separated from settings.php</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Deployment Pipeline</h2>
+                <ul>
+                    <li>Dev / Stage / Production</li>
+                    <li>
+                        As it gets deployed to the server, code is moved to the next branch</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Jenkins</h2>
+                <ul>
+                    <li>Autmoation manager</li>
+                    <li>Open Source</li>
+                    <li>Rich Plugin Library</li>
+                    <li>Platform Independent</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Types of Builds</h2>
+                <ul>
+                    <li>Daily Server Maintenance</li>
+                    <li>Daily Backups</li>
+                    <li>Core Updates</li>
+                    <li>Sync to Stage & Dev</li>
+                    <li>Deployment pipeline</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Sample Build</h2>
+                <ul class="buildsteps">
+                    <li>Puts site into maintenance mode</li>
+                    <li>Flushes Caches</li>
+                    <li>Generates a back up of entire site root</li>
+                    <li>Generates a database dump of current site</li>
+                    <li>Checks for CMI changes</li>
+                    <li>GIT fetch </li>
+                    <li>GIT Checkout development branch</li>
+                    <li>GIT Reset Current Branch</li>
+                    <li>Drush UPDB</li>
+                    <li>Flush Caches</li>
+                    <li>Exports CMI or Imports CMI based on changes</li>
+                    <li>Tags Release</li>
+                    <li>Pushes Release back to git</li>
+                    <li>Checks out current release</li>
+                    <li>Flushes Caches one more time</li>
+                    <li>Takes site out of maintenance mode</li>
+                    <li>Sends you a nice message</li>
+                </ul>
+            </section>
+            <section class="workflow">
+                <h3>Core Update</h3>
+                <figure>
+                    <img src="img/uctech-core.png">
+                    <figcaption>
+                        <p>Core updates are pulled from the base repo into the development branch, not deployed to dev.</p>
+                    </figcaption>
+            </section>
+            <section class="workflow">
+                <h3>Deploy Dev</h3>
+                <figure>
+                    <img src="img/uctech-dev.png">
+                    <figcaption>
+                        <p>Development server pulls from the development branch, deploys to dev site, and creates a tag.</p>
+                    </figcaption>
+            </section>
+            <section class="workflow">
+                <h3>Deploy Stage</h3>
+                <figure>
+                    <img src="img/uctech-stage.png">
+                    <figcaption>
+                        <p>Stage server pulls from development branch, deploys to stage, pushes code back to stage branch, and creates a tag.</p>
+                    </figcaption>
+            </section>
+            <section class="workflow">
+                <h3>Deploy Production</h3>
+                <figure>
+                    <img src="img/uctech-prod.png">
+                    <figcaption>
+                        <p>Production server pulls from stage branch, deploys to production, pushes code to production, adds a tag then pushes tag to master.</p>
+                    </figcaption>
+            </section>
+            <section>
+                <h2>Monitoring your instance</h2>
+                <ul>
+                    <li>Monit</li>
+                    <li>Fail2Ban</li>
+                    <li>NetData</li>
+                    <li>GoAccess</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Implementation Challenges</h2>
+                <ul>
+                    <li>Hosting sites we haven’t built requires custom scripts and/or normalization </li>
+                    <li>Shared host systems make understanding resource usage more challenging</li>
+                    <li>Limited amount of open source tools to monitor</li>
+                </ul>
+            </section>
+            <section>
+                <h2>End Results</h2>
+                <section>
+                    <img class="network" src="img/uctech-network.png" alt="A sample network using the 5 previous AWS services" />
+                </section>
+                <section>
+                    <ul>
+                        <li>Time & Cost Savings</li>
+                        <li>Reliability</li>
+                        <li>Redundancy</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Total Monthly Cost: < $200 dollars for infrastructure that can handle CMS usage >1M medium to heavy page loads per month and 100s of concurrent connections across multiple vhosts.</p>
+                </section>
+            </section>
+            <section>
+                <h2>Taking it further</h2>
+                <ul>
+                    <li>Automated Testing / Continuous Integration</li>
+                    <li>AWS CLI</li>
+                </ul>
+            </section>
+            <section>
+            	<p>Thank you!</p>
+        	</section>
+        </div>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+    });
+    </script>
+</body>
+
+</html>
